@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 
 import random
+import colors as c
+
+print(c.clear)
+print(c.red + '''
+Welcome to the magic eight ball!
+Enter your question below.
+''' + c.reset)
 
 answers = [
     'Signs point to yes.',
@@ -45,6 +52,8 @@ while True:
     question = input('> ')
     if 'do you love me' in question:
         print("GO DIE IN A PIT!!!!!!!!!!!")
+    elif question == 'bye':
+        exit()
     else:
         answer = random.choice(answers)
         print(answer)
